@@ -23,7 +23,7 @@ module Register
 	output reg [N-1:0] DataOutput
 );
 
-always@(negedge reset or posedge clk) begin
+always@(negedge reset or negedge clk) begin //set ti begedge so it reads value on flanco de bajada
 	if(reset==0)
 		DataOutput <= 0;
 	else	

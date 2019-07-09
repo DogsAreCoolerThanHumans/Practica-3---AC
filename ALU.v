@@ -69,7 +69,7 @@ localparam JR  = 4'b1011; //jump register
 			BEQ:
 				ALUResult = A - B; //to figure sign out
 			MEM:
-				ALUResult = (A + B - 268500992) / 4; //sw/lw: for memory address offset
+				ALUResult = (A + B - 268500992) / 4; //sw/lw: for memory address mapping
 		  	JR:
 				ALUResult = A; 
 			

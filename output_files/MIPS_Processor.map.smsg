@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at MIPS_Processor.v(43): object "MemtoReg_wire" differs only in case from object "MemToReg_wire" in the same scope File: C:/MIPSProjects/MIPSProcessor_ver2/MIPS_Processor.v Line: 43
