@@ -1,4 +1,4 @@
 noview wave
 vsim work.MIPS_Processor_TB
-do C:/MIPSProjects/MIPSProcessor_ver1/wave.do
-run 910
+do C:/MIPSProjects/p3f/wave.do
+run 1000

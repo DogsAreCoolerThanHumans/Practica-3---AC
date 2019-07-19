@@ -19,4 +19,4 @@ module ShiftLeft2
      DataOutput = {DataInput[29:0], 1'b0, 1'b0};
 
 endmodule 
-// leftshift2//
+// leftShift2

@@ -18,7 +18,7 @@
 #
 # Quartus Prime
 # Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-# Date created = 02:02:05  July 09, 2019
+# Date created = 13:31:58  July 13, 2019
 #
 # -------------------------------------------------------------------------- #
 #
@@ -40,7 +40,7 @@ set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
 set_global_assignment -name TOP_LEVEL_ENTITY MIPS_Processor
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "02:02:05  JULY 09, 2019"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:31:58  JULY 13, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
 set_global_assignment -name VERILOG_FILE SignExtend.v
 set_global_assignment -name VERILOG_FILE ShiftLeft2.v
@@ -50,9 +50,12 @@ set_global_assignment -name VERILOG_FILE ProgramMemory.v
 set_global_assignment -name VERILOG_FILE Pipeline.v
 set_global_assignment -name VERILOG_FILE PC_Register.v
 set_global_assignment -name VERILOG_FILE MUXRegisterFile.v
+set_global_assignment -name VERILOG_FILE Multiplexer3to1.v
 set_global_assignment -name VERILOG_FILE Multiplexer2to1.v
 set_global_assignment -name VERILOG_FILE MIPS_Processor_TB.v
 set_global_assignment -name VERILOG_FILE MIPS_Processor.v
+set_global_assignment -name VERILOG_FILE HazardUnit.v
+set_global_assignment -name VERILOG_FILE ForwardUnit.v
 set_global_assignment -name VERILOG_FILE Definitions.v
 set_global_assignment -name VERILOG_FILE DecoderRegisterFile.v
 set_global_assignment -name VERILOG_FILE DataMemory.v

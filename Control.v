@@ -27,21 +27,16 @@ module Control
 	output reg Jal
 );
 localparam R_Type = 0;
-localparam I_Type_ADDI = 6'h8; //instruction/green sheet hex code
+localparam I_Type_ADDI = 6'h8;
 localparam I_Type_ORI = 6'h0d;
-
-localparam I_Type_ANDI = 6'hc;
-localparam I_Type_LUI = 6'hf;
-
+localparam I_Type_ANDI = 6'h0c;
 localparam I_Type_BEQ = 6'h4;
 localparam I_Type_BNE = 6'h5;
-
-
 localparam J_Type_J = 6'h2;
 localparam J_Type_JAL = 6'h3;
+localparam I_Type_LUI = 6'hf;
 localparam I_Type_LW = 6'h23;
 localparam I_Type_SW = 6'h2b;
-//
 
 
 reg [11:0] ControlValues; //added extra bit for jump 
@@ -60,17 +55,17 @@ always@(OP) begin
 		J_Type_JAL:	  ControlValues= 12'b10_001_00_00_011;
 		I_Type_LW:    ControlValues= 12'b00_111_10_00_110;
 		I_Type_SW:	  ControlValues= 12'b00_100_01_00_110;
-		
 		default:
 			ControlValues= 12'b10_000_00_00_011;
 		endcase
-			Jal = (ControlValues== 12'b10_001_00_00_011) ? 1'b1 : 1'b0;
+		Jal = (ControlValues== 12'b10_001_00_00_011) ? 1'b1 : 1'b0;
+
 end	
 
 
-assign Jump = 	 ControlValues[11]; //jump bit added	
+assign Jump = 	 ControlValues[11]; //jump bit added
 assign RegDst = ControlValues[10];
-
+	
 assign ALUSrc = ControlValues[9];
 assign MemtoReg = ControlValues[8];
 assign RegWrite = ControlValues[7];

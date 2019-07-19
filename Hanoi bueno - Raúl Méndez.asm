@@ -1,4 +1,4 @@
-#Raúl Méndez 
+#RaÃºl MÃ©ndez 
 #Hanoi Towers recursively
 
 #Final IC: 5414 (5409 shortest)
@@ -33,7 +33,7 @@ loadDisks: #Loads the n-1 disks onto aux tower
 	sw $t0, 0($a1)			#Adds curent disk onto origin tower	
 	addi $t0, $t0, -1		#Disks are now n-1
 	
-	addi $a1, $a1, 4		#Increments a1´s "pointer" to the next address (next space in origin tower)
+	addi $a1, $a1, 4		#Increments a1Â´s "pointer" to the next address (next space in origin tower)
 	bne $t0, 0, loadDisks	#Loop: loads remaining disks until t0 = 0
 
 	jal HanoiTower			#Copies current address to $ra and jumps to HanoiTower
@@ -67,7 +67,7 @@ HanoiTower:	#excecute
     #Moving origin to destiny
 	addi $a1, $a1, -4	#Takes the disk from destiny
 	lw $t3, 0($a1)		#Loads origin to temp var
-	    sw $zero, 0($a1)	#Writes a 0 in disk´s past place, before moving it to destiny
+	    sw $zero, 0($a1)	#Writes a 0 in diskÂ´s past place, before moving it to destiny
 	    sw $t3, 0($a3)  	#Saves address from origin to destiny
 	    addi $a3, $a3, 4 	#Adds disk to next place in destiny tower
 	
@@ -94,7 +94,7 @@ baseCase:#BaseCase: Moves origin to destiny
     #Moving origin to destiny
 	addi $a1, $a1, -4		#Takes disk from destiny
 	lw $t3, 0($a1)			#Loads origin to temp var
-	    sw $zero, 0($a1)		#Writes a 0 in disk´s past place, before moving it to destiny
+	    sw $zero, 0($a1)		#Writes a 0 in diskÂ´s past place, before moving it to destiny
 	    sw $t3, 0($a3)  		#Saves address from origin to destiny
 	    addi $a3, $a3, 4 		#Adds disk to next place in destiny tower
 	
